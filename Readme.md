@@ -26,10 +26,10 @@ Antes de comenzar, asegúrate de tener los siguientes requisitos instalados en t
 
 Sigue estos pasos para configurar el proyecto localmente:
 
-- Clona este repositorio en tu máquina local:
-   ```
-   git clone https://github.com/stephenlucic/galleryOfArt.git
-   ```
+- Clona este repositorio en tu máquina local:  
+```
+git clone https://github.com/stephenlucic/galleryOfArt.git
+ ```
 - Crea un entorno virtual y activa:
 ```
 python -m venv venv
