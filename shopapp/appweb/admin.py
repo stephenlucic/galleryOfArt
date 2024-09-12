@@ -10,3 +10,4 @@ class ArtistaAdmin(admin.ModelAdmin):
 
 admin.site.register(Tipo)
 admin.site.register(Artista, ArtistaAdmin)
+admin.site.register(Contacto)

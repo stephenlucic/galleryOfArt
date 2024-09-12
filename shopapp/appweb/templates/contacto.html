@@ -1,11 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-</head>
-<body>
-    <h4>contacto</h4>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block contenido %}
+
+<!-- Start Content Page -->
+<div class="container-fluid bg-light py-5">
+    <div class="col-md-6 m-auto text-center">
+        <h1 class="h1">Contact Us</h1>
+        <p>
+            Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet.
+        </p>
+    </div>
+</div>
+
+{{mensaje}}
+<!-- Start Contact -->
+<div class="container py-5">
+    <div class="row py-5">
+        <form id="formularioContacto" action="" method="POST">
+        {% csrf_token %}
+        {{form_contacto|crispy}}
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        
+    </div>
+</div>
+<!-- End Contact -->
+
+
+
+
+{% endblock %}
