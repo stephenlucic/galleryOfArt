@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block contenido %}
+
+<div class="container py-5">
+    <div class="text-center"><h3>Listado Artistas</h3></div>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Rut</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Habilitado</th>
+            <th scope="col">Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for a in mis_artistas %}
+          <tr>
+            <th scope="row">{{a.rut}}</th>
+            <td>{{a.nombre}}</td>
+            <td>{{a.fecha_nacimiento}}</td>
+            <td>{{a.tipo}}</td>
+            <td>
+            {% if a.estado %}    
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked disabled>
+            </div>
+            {% else %}
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" disabled>
+            </div>
+            {% endif %}
+            </td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='{% url 'modificar_artista' a.rut %}'"><i class="bi bi-pencil-square"></i></button>
+                <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='{% url 'eliminar_artista' a.rut %}'"><i class="bi bi-trash3"></i></button>
+              </div>
+ 
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>  
+</div>
+
+
+{% endblock %}

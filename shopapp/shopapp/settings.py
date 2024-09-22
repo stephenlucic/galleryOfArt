@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = '/login_usuario'
+LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -131,5 +133,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-MEDIA_URL = '/archivo/' 
+MEDIA_URL = '/archivos/' 
 MEDIA_ROOT= os.path.join(BASE_DIR,"archivos")

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block contenido %}
+
+<!-- Start Contact -->
+<div class="container py-5">
+    <div class="row py-5">
+        <div class="text-center">
+            <h2>Registrar</h2>
+        </div>
+       
+        <h2>Registrar</h2>
+        <br>
+        <form id="formularioLogin" action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" name="nombre" required>
+            
+
+            
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" name="apellido" required>
+            
+            
+                <label for="correo">Correo</label>
+                <input type="email" class="form-control" name="correo" required>
+            
+
+            
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" name="password" required>
+            
+
+                <br>
+           
+                <button type="submit" class="btn btn-success btn-lg px-3">Registrar</button>
+           
+            
+            
+        </form>
+    </div>
+</div>
+
+{% endblock %}
