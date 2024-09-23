@@ -84,8 +84,14 @@ WSGI_APPLICATION = 'shopapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':'mssql', #'django.db.backends.sqlite3',
+        'NAME': 'galerryofart', #BASE_DIR / 'db.sqlite3',
+        'USER':'django',
+        'PASSWORD':'123',
+        'HOST':'localhost',
+        'PORT':'',
+        'OPTIONS':{
+            'driver':'ODBC Driver 17 for SQL Server'}
     }
 }
 
