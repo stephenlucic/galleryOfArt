@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://stephenlucic.github.io/galleryOfArt/',
-  	base: '/galleryOfArt',
+  	base: '/galleryOfArt/',
 	integrations: [
 		starlight({
 			title: 'My Docs',
